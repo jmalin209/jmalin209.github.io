@@ -2061,7 +2061,7 @@
 /* Form */
 
 	form {
-		margin: 25px 25px 2rem 25px;
+		margin: 50px 25px 2rem 25px;
 	}
 
 	label {
@@ -2354,11 +2354,11 @@
 		.image.fit {
 			display: block;
 			margin: 0 0 2rem 0;
-			width: 100%;
+			width: 80%;
 		}
 
 			.image.fit img {
-				width: 100%;
+				width: 40%;
 			}
 
 		.image.main {
@@ -2369,7 +2369,10 @@
 
 			.image.main img {
 				width: 100%;
-			}
+			}	
+		.headerLogo {
+			width: 100%;
+		}	
 
 /* List */
 
@@ -3099,7 +3102,7 @@
 		.wrapper.style3 {
 			background-color: #000;
 			color: #bfbfbf;
-			background-image: url(../../images/bg.jpg);
+			background-image: url(../../images/garett-mizunaka-xFjti9rYILo-unsplash-copie.jpg);
 			background-size: cover;
 			background-attachment: fixed;
 			background-position: center;
@@ -3742,6 +3745,10 @@
 					color: rgba(255, 255, 255, 0.65);
 				}
 
+			#header > .logo img {
+				width: 30px;
+			}
+
 			#header > .logo span {
 				font-weight: 400;
 				font-size: .8em;
@@ -3865,12 +3872,19 @@
 		}
 
 	}
+
+	/* Toggle between large header (for large screens) on the left and drop-down menu on the right-hand side*/ 
 	@media screen and (max-width: 500px) {
 		.logo {
 			visibility: hidden;
 		}	
 	}
-	
+
+	@media screen and (min-width: 501px) {
+		.headermenu {
+			visibility: hidden;
+		}	
+	}
 	
 	
 /* Menu */
@@ -3998,6 +4012,14 @@
 
 			#menu {
 				padding: 2.5rem 1.75rem;
+			}
+
+		}
+
+		@media screen and (min-width: 501px) {
+
+			.menu {
+				visibility: hidden;
 			}
 
 		}
