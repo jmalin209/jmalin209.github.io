@@ -2705,8 +2705,9 @@
 	}
 
 		.wrapper > .inner {
-			margin: 0 auto;
 			width: 80rem;
+			margin: 0 2rem;
+
 		}
 
 		.wrapper.style1 {
@@ -3406,7 +3407,9 @@
 		@media screen and (max-width: 1280px) {
 
 			.wrapper > .inner {
-				width: 75rem;
+				width: 95%;
+				margin: 0 2rem;
+				text-align: justify;
 			}
 
 		}
@@ -3414,7 +3417,9 @@
 		@media screen and (max-width: 980px) {
 
 			.wrapper > .inner {
-				width: 90%;
+				width: 95%;
+				margin: 0 1rem;
+				text-align: justify;
 			}
 
 			.wrapper.style3 {
