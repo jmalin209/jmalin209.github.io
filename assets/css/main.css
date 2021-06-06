@@ -2894,6 +2894,8 @@
 		.wrapper.style2 {
 			background-color: #f2f2f2;
 			color: #a6a6a6;
+			padding: 4rem 0 1rem 0 ;
+
 		}
 
 			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
