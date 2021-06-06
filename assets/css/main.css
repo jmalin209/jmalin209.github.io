@@ -2370,9 +2370,27 @@
 			.image.main img {
 				width: 100%;
 			}	
+
+	/*Fait par Jules*/
+
 		.headerLogo {
 			width: 100%;
 		}	
+
+		.gallerieImages {
+			display: flex; 
+			flex-direction: row; 
+			justify-content: space-around; 
+			flex-wrap: wrap; 
+			max-width: 100%; 
+		}
+
+		.gallerieImages img{
+			max-width: 100%; 
+			max-height: 350px; 
+			margin: 1em;
+		}
+
 
 /* List */
 
