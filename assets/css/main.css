@@ -2384,13 +2384,13 @@
 			flex-wrap: wrap; 
 			max-width: 100%; 
 		}
-	@media screen and (min-width: 501px) {
+
 		.gallerieImages img{
 			max-width: auto; 
 			max-height: 350px; 
 			margin: 1em;
 		}
-	}
+
 	/*Image gallery for smartphones*/ 
 	@media screen and (max-width: 500px) {
 		.gallerieImages img{
@@ -4367,7 +4367,9 @@
 		}
 
 		@media screen and (max-width: 736px) {
+
 			#footer {
-				padding: 3rem 0 1rem 0;
+				padding: 3rem 0 1rem 0 ;
 			}
+
 		}
