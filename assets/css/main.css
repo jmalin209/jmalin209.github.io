@@ -2396,7 +2396,6 @@
 		.gallerieImages img{
 			max-width: 95%; 
 			max-height: auto; 
-			margin: 1em 1em 1em 1em;
 		}	
 	}
 
@@ -4056,7 +4055,7 @@
 /* Banner */
 
 	.banner {
-		background-color: #8a4680;
+		background-color: #383838;
 		color: #e2d1df;
 		padding: 8em 0;
 		position: relative;
@@ -4093,8 +4092,8 @@
 
 		.banner.full {
 			padding: 0;
-			min-height: 100vh;
-			height: 100vh !important;
+			min-height: 90vh;
+			height: 90vh !important;
 		}
 
 		.banner.half {
