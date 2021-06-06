@@ -2395,11 +2395,10 @@
 	@media screen and (max-width: 500px) {
 		.gallerieImages img{
 			max-width: 95%; 
-			max-height: auto; 
+			height: auto; 
 			margin: 1em;
 		}	
 	}
-
 
 /* List */
 
