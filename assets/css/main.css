@@ -2386,9 +2386,10 @@
 		}
 
 		.gallerieImages img{
-			width: auto;
-			max-height: 350px; 
+			max-width: 95%;
+ 			height: auto;
 			margin: 1em;
+			
 		}
 
 	/*Image gallery for smartphones
