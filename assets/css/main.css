@@ -2391,6 +2391,15 @@
 			margin: 1em;
 		}
 
+	/*Image gallery for smartphones*/ 
+	@media screen and (max-width: 500px) {
+		.gallerieImages img{
+			max-width: 95%; 
+			max-height: auto; 
+			margin: 1em 1em 1em 1em;
+		}	
+	}
+
 
 /* List */
 
