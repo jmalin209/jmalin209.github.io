@@ -2386,7 +2386,7 @@
 		}
 
 		.gallerieImages img{
-			max-width: auto; 
+			width: auto;
 			max-height: 350px; 
 			margin: 1em;
 		}
@@ -2395,7 +2395,7 @@
 	@media screen and (max-width: 500px) {
 		.gallerieImages img{
 			max-width: 95%; 
-			max-height: auto; 
+			height: auto;
 			margin: 1em;
 		}	
 	}
