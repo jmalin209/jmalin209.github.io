@@ -16,7 +16,7 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><a href="index.html"><img src="images/homepage.png"/></a><span> | </span><a href="Culasses.html">Culasses</a><span> | </span><a href="Moteurs.html">Moteurs</a><span> | </span><a href="Radiateurs.html">Radiateurs</a><span> | </span><a href="Contact.html"><img src="images/envelope.jpg"/></a></div>
+				<div class="logo"><a href="index.html"><img src="images/homepage.png"/></a><span> | </span><a href="Culasses.html">Culasses</a><span> | </span><a href="Moteurs.html">Moteurs</a><span> | </span><a href="Radiateurs.html">Radiateurs</a><span> | </span><a href="myform.php"><img src="images/envelope.jpg"/></a></div>
 				<!-- <div class="logo"><a href="index.html"><img src="images/homepage.png"/></a><span> | </span><a href="Culasses.html">Culasses</a><span> | </span><a href="Moteurs.html">Moteurs</a><span> | </span><a style="color: RGB(0, 153, 184);"</a> href="Radiateurs.html">Radiateurs</a></div> -->
 				<a class="headermenu" href="#menu">Menu</a>
 			</header>
@@ -48,6 +48,36 @@
 				<div class="inner">
 					<div class="box">
 						<div class="content">
+                            <!-- Form -->
+							
+							<form id="contact" method="post" action="Contact - copie (2).php">
+								<h3>Demande d'information ou de devis</h3>
+								<div class="row uniform">
+									<div class="6u 12u$(xsmall)">
+										<input type="text" name="name" id="name" value="" placeholder="Votre nom" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<input type="email" name="email" id="email" value="" placeholder="Votre e-mail" />
+									</div>
+									<!-- Break -->
+									<div class="12u$">
+										<textarea name="message" id="message" placeholder="Composez votre message" rows="6"></textarea>
+									</div>
+									<!-- Break -->
+									<div class="6u$ 12u$(small)">
+										<input type="checkbox" id="human" name="human" required>
+										<label for="human">Je ne suis pas un robot</label>
+									</div>
+									<!-- Break -->
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Envoyer" /></li>
+											<li><input type="reset" value="Recommencer" class="alt" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+
                             <h2>Nous trouver</h2>
                             <div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=Culasses%2077,%2014%20Avenue%20Louise%20Michel,%2077100%20Nanteuil-l%C3%A8s-Meaux&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:center;height:400px;width:100%;}</style><a href="https://www.embedgooglemap.net">map embed iframe</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:100%;}</style></div></div>
                         </div>
