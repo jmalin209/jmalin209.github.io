@@ -48,20 +48,100 @@
 				<div class="inner">
 					<div class="box">
 						<div class="content">
+
+<?php
+
+/*
+// On vérifie si la fonction ini_set() a été désactivée...
+$desactive = ini_get('disable_functions');
+if (preg_match("/ini_set/i", "$desactive") == 0) {
+// Si elle n'est pas désactivée, on définit ini_set de manière à n'afficher que les erreurs...
+ini_set("error_reporting" , "E_ALL & ~E_NOTICE");
+}
+
+// Vérifier que le formulaire a été envoyé...
+if (isset($_POST['envoi'])) {
+
+
+//On commence une session pour enregistrer les variables du formulaire...
+
+session_start();
+
+$_SESSION['champ1'] = $_POST['name'];
+$_SESSION['champ1'] = $_POST['champ1'];
+
+//Enregistrement des zones de texte...
+$_SESSION['champ2'] = $_POST['zone_texte2'];
+
+// Définir l\'icone apparaissant en cas d\'erreur...
+
+
+// Définir sur 0 pour afficher un petit x de couleur rouge.
+// Définir sur 1 pour afficher l\'image d\'une croix rouge telle que celle utilisée dans l\'assistant
+// Si vous utilisez l\'option 1, l\'image de la croix rouge \'icone.gif\' doit se trouver dans le répertoire \'images\',
+// ce dernier devant se trouver au même niveau que votre formulaire...
+$flag_icone = 0;
+
+// On vérifie si $flag_icone est défini sur 0 ou 1...
+if ($flag_icone == 0) {
+$icone = "<b><font size=\"3\" face=\"Arial, Verdana, Helvetica, sans-serif\" color=\"#CC0000\">x</font></b>";
+} else {
+$icone = "<img src=\"images/icone.gif\"";
+}
+
+// Définir l'indicateur d'erreur sur zéro...
+$flag_erreur = 0;
+// N'envoyer le formulaire que s'il n'y a pas d'erreurs...
+if ($flag_erreur == 0) {					
+*/
+// Addresse de réception du formulaire
+$dest = 'CuMoRa<jmalin.code@gmail.com>';
+$subject = 'El gran menù !';
+
+$content_head = "<html>\n<head>\n<title>Formulaire</title>\n<meta http-equiv=Content-Type content=text/html; charset=iso-8859-1>\n</head>\n<body bgcolor=#FFFFFF>\n";
+$content_main = 'Nom :' . htmlspecialchars($_POST['name']) .' <br/>Email : '. htmlspecialchars($_POST['email']) .'<br/>Message' . htmlspecialchars($_POST['message']) .'<br/>';
+$content_foot = "</body></html>";
+$content = $content_head . $content_main . $content_foot;
+
+$headers = "MIME-Version: 1.0 \n";
+	$headers .="Return-Path: CuMoRa<jmalin.code@gmail.com>\n";
+	$headers .="Reply-To: CuMoRa<jmalin.code@gmail.com>\n";
+	$headers .="Content-Type: text/html; charset=iso-8859-1 \n";
+
+//mail($dest, $subject, $content, $headers);
+//header("Location:Sushishop.html");
+					// Send the e-mail
+//					if (@!mail($dest,$subject,$content,$headers)) {
+//						echo("Envoi du formulaire impossible");
+//						exit();
+//						} else {
+							mail($dest,$subject,$content,$headers);
+						// Rediriger vers la page de remerciement
+						header("Location:Contact.html");
+						exit();
+//					  } // Fin else
+//					} // Fin du if ($flag_erreur == 0) {
+//				} // Fin de if POST
+
+?>
                             <!-- Form -->
 							
-							<form id="contact" method="post" action="Contact.php">
-								<h3>Demande d'information ou de devis</h3>
+							<form id="contact" method="post" action="Sushishop.php">
+								<h3>Il faut se décider</h3>
 								<div class="row uniform">
 									<div class="6u 12u$(xsmall)">
 										<input type="text" name="name" id="name" value="" placeholder="Votre nom" />
 									</div>
 									<div class="6u$ 12u$(xsmall)">
-										<input type="email" name="email" id="email" value="" placeholder="Votre e-mail" />
+										<input type="text" name="choix1" id="choix1" value="" placeholder="Ouloulou ça va être bon" />
 									</div>
 									<!-- Break -->
 									<div class="12u$">
-										<textarea name="message" id="message" placeholder="Composez votre message" rows="6"></textarea>
+										<input type="text" name="choix2" id="choix2" value="" placeholder="Ouloulou ça va être très bon" />
+									</div>
+									<!-- Break -->
+									<div class="12u$">
+										<input type="text" name="choix3" id="choix3" value="" placeholder="Ouloulou" />
 									</div>
 									<!-- Break -->
 									<div class="6u$ 12u$(small)">
@@ -90,12 +170,6 @@
 				</div>
 			</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
